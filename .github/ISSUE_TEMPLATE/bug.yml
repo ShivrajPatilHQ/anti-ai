@@ -1,0 +1,33 @@
+name: Bug
+description: The scanner crashes, hangs, or scores inconsistently
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: The command you ran, plus the input file if you can share it.
+      render: shell
+      placeholder: |
+        python3 scripts/scan.py draft.md --json
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Python version and OS
+      placeholder: "3.9.6, macOS 15.2"
+    validations:
+      required: true

@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 *.skill
+dist/
 .DS_Store
 .venv/
 venv/

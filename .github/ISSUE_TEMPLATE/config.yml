@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Wikipedia:Signs of AI writing
+    url: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing
+    about: The upstream catalogue this repo inverts. New tells often land there first.

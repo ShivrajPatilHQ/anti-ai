@@ -1,0 +1,39 @@
+name: False positive
+description: The scanner flagged writing that is genuinely human
+labels: ["false-positive"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        These matter more than missed tells. A detector that flags everything is
+        worse than no detector.
+  - type: textarea
+    id: text
+    attributes:
+      label: The text that got flagged
+      description: Paste enough surrounding context that the score is reproducible.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Scanner output
+      description: Output of `python3 scripts/scan.py yourfile.md`. Rendered as a code block, no backticks needed.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: provenance
+    attributes:
+      label: Who wrote it, and when?
+      description: >
+        Human-written text from before late 2022 is the strongest evidence, since
+        it predates the models.
+      placeholder: "Me, in a 2019 postmortem"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Python version
+      placeholder: "3.11.6"

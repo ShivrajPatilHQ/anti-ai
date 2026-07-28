@@ -24,7 +24,11 @@ As a Claude skill, drop the folder into your skills directory:
 ~/.claude/skills/anti-ai/
 ```
 
-Claude Code, Cowork, and claude.ai all read from there. You can also upload the packaged `.skill` file through the Claude settings UI.
+Claude Code, Cowork, and claude.ai all read from there. You can also upload the packaged `.skill` file through the Claude settings UI. Grab it from the [latest release](https://github.com/ShivrajPatilHQ/anti-ai/releases/latest), or build it yourself:
+
+```bash
+./scripts/build-skill.sh    # writes dist/anti-ai.skill
+```
 
 To use the scanner on its own, you need Python 3.8 or newer and nothing else:
 

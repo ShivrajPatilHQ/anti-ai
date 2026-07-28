@@ -1,0 +1,54 @@
+name: New tell
+description: A pattern that reads as machine-written and the scanner does not catch
+labels: ["new-tell"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Model output drifts, so this list goes stale. "delve" peaked in 2023 and
+        had largely dropped off by 2025. New tells are the most useful thing you
+        can send.
+  - type: textarea
+    id: example
+    attributes:
+      label: Real example
+      description: >
+        Paste the text you actually saw, not a description of it. If you know
+        which model produced it, say so.
+      placeholder: |
+        "The framework serves as a testament to the team's commitment to
+        scalable, resilient, and future-proof infrastructure."
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Which category does it belong in?
+      options:
+        - A. Puffery and inflated significance
+        - B. Sentence-shape formulas
+        - C. Vocabulary and copula avoidance
+        - D. Formatting and structure
+        - E. Vagueness and weasel attribution
+        - F. Missing human texture
+        - R. Residue (leftover machinery, vendor signatures, tracking params)
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: human-counterexample
+    attributes:
+      label: Where a human would write this too
+      description: >
+        The hard part of any new pattern is the false positive. Give a case where
+        the same wording is legitimate, or say you could not find one.
+      placeholder: >
+        "Serves as" is normal in legal and standards text: "This document serves
+        as the reference implementation."
+    validations:
+      required: true
+  - type: input
+    id: frequency
+    attributes:
+      label: How often are you seeing it?
+      placeholder: "Every LinkedIn post since roughly March 2026"
